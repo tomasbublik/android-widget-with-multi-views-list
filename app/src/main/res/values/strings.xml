@@ -1,0 +1,22 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="app_name">Test Widget App</string>
+  <string name="action_settings">Settings</string>
+
+  <string name="appwidget_configure_instructions">This text will be shown before the date in our example widget.</string>
+  <string name="appwidget_prefix_default">Default prefix</string>
+  <string name="appwidget_text_format"><xliff:g id="prefix">%1$s</xliff:g>: <xliff:g id="time">%2$s</xliff:g></string>
+  <string name="empty_view_text">Empty list</string>
+  <string name="place">Home</string>
+  <string name="page_id_index_key">page_id_index_key</string>
+  <string name="page_index">0</string>
+  <string name="widgetDataStorage">WIDGET_DATA_STORAGE</string>
+  <string name="widgetData">WIDGET_DATA</string>
+  <string name="right_arrow_button">Right arrow button</string>
+  <string name="the_main_logo">The main logo</string>
+  <string name="a_wider_red_box_to_fill_the_part_between_logo_and_yellow_box">A wider red box to fill the part between logo and yellow box</string>
+  <string name="narrow_yellow_box_between_two_red_areas">Narrow yellow box between two red areas</string>
+  <string name="very_narrow_red_box">Very narrow red box</string>
+  <string name="very_thin_green_box_at_the_end">Very thin green box at the end</string>
+  <string name="left_arrow_button">Left arrow button</string>
+  <string name="icon_near_the_main_place_text">Icon near the main place text</string>
+</resources>

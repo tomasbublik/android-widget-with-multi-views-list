@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:showIn="@layout/appwidget_provider">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/widget_round_upper_red_corners"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/eon_logo"
+      android:layout_width="40dp"
+      android:layout_height="match_parent"
+      android:layout_weight="0.3"
+      android:scaleX="1.7"
+      android:scaleY="1.7"
+      android:src="@drawable/eon_logo"
+      android:contentDescription="@string/the_main_logo" />
+
+    <ImageView
+      android:id="@+id/widerRedBox"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="0.5"
+      android:src="@drawable/red_box"
+      android:contentDescription="@string/a_wider_red_box_to_fill_the_part_between_logo_and_yellow_box" />
+
+    <ImageView
+      android:id="@+id/yellowBox"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="0.1"
+      android:src="@drawable/yellow_box"
+      android:contentDescription="@string/narrow_yellow_box_between_two_red_areas" />
+
+    <ImageView
+      android:id="@+id/narrowerRedBox"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="0.05"
+      android:src="@drawable/red_box"
+      android:contentDescription="@string/very_narrow_red_box" />
+
+    <ImageView
+      android:id="@+id/greenBox"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="0.05"
+      android:src="@drawable/green_box"
+      android:contentDescription="@string/very_thin_green_box_at_the_end" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+      android:id="@+id/leftButton"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:src="@drawable/left_arrow"
+      android:contentDescription="@string/left_arrow_button" />
+
+    <ImageView
+      android:id="@+id/main_icon_view"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:src="@drawable/btn_green"
+      android:contentDescription="@string/icon_near_the_main_place_text" />
+
+    <TextView
+      android:id="@+id/placeName"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center|start"
+      android:text="@string/place"
+      android:textSize="14sp"
+      android:textStyle="bold" />
+
+    <ImageView
+      android:id="@+id/rightButton"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:src="@drawable/right_arrow"
+      android:contentDescription="@string/right_arrow_button" />
+
+  </LinearLayout>
+</merge>
