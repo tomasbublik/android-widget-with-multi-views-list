@@ -3,11 +3,9 @@ package cz.bublik.testwidgetapp.widget;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -100,11 +98,11 @@ public class AppWidget extends AppWidgetProvider {
         // broadcasts.  We don't want to be listening for these if nobody has our widget active.
         // This setting is sticky across reboots, but that doesn't matter, because this will
         // be called after boot if there is a widget instance for this provider.
-        PackageManager pm = context.getPackageManager();
+        /*PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(
                 new ComponentName("cz.bublik.testwidgetapp", ".widget.BroadcastReceiver"),
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                PackageManager.DONT_KILL_APP);
+                PackageManager.DONT_KILL_APP);*/
     }
 
     @Override
@@ -112,11 +110,11 @@ public class AppWidget extends AppWidgetProvider {
         // When the first widget is created, stop listening for the TIMEZONE_CHANGED and
         // TIME_CHANGED broadcasts.
         Log.d(TAG, "onDisabled");
-        PackageManager pm = context.getPackageManager();
+        /*PackageManager pm = context.getPackageManager();
         pm.setComponentEnabledSetting(
                 new ComponentName("cz.bublik.testwidgetapp", ".appwidget.BroadcastReceiver"),
                 PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                PackageManager.DONT_KILL_APP);
+                PackageManager.DONT_KILL_APP);*/
     }
 
     @Override
@@ -169,6 +167,7 @@ public class AppWidget extends AppWidgetProvider {
     }
 
     protected static PendingIntent getPendingSelfIntent(Context context, String action, int appWidgetId) {
+        Log.d(TAG, "getPendingSelfIntent");
         Intent intent = new Intent(context, AppWidget.class);
         intent.setAction(action);
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId);
