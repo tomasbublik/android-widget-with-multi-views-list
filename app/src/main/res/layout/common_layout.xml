@@ -14,10 +14,10 @@
       android:layout_width="40dp"
       android:layout_height="match_parent"
       android:layout_weight="0.3"
-      android:scaleX="1.7"
-      android:scaleY="1.7"
-      android:src="@drawable/eon_logo"
-      android:contentDescription="@string/the_main_logo" />
+      android:contentDescription="@string/the_main_logo"
+      android:scaleX="0.7"
+      android:scaleY="0.7"
+      android:src="@drawable/eon_logo1" />
 
     <ImageView
       android:id="@+id/widerRedBox"
@@ -62,34 +62,58 @@
       android:id="@+id/leftButton"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:src="@drawable/left_arrow"
-      android:contentDescription="@string/left_arrow_button" />
+      android:layout_marginLeft="10dp"
+      android:minWidth="15dp"
+      android:scaleX="1.3"
+      android:scaleY="1.3"
+      android:layout_weight="0.1"
+      android:contentDescription="@string/left_arrow_button"
+      android:src="@drawable/angle_left"
+      android:layout_marginStart="10dp" />
 
-    <ImageView
-      android:id="@+id/main_icon_view"
-      android:layout_width="wrap_content"
+    <LinearLayout
+      android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:src="@drawable/btn_green"
-      android:contentDescription="@string/icon_near_the_main_place_text" />
+      android:layout_weight="0.8"
+      android:orientation="horizontal"
+      android:gravity="center|center_horizontal"
+      >
 
-    <TextView
-      android:id="@+id/placeName"
-      android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:gravity="center|start"
-      android:text="@string/place"
-      android:textSize="14sp"
-      android:textStyle="bold" />
+      <ImageView
+        android:id="@+id/main_icon_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:contentDescription="@string/icon_near_the_main_place_text"
+        android:gravity="center|start"
+        android:padding="5dp"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        android:src="@drawable/ico_socket" />
+
+      <TextView
+        android:id="@+id/placeName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center|end"
+        android:text="@string/place"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    </LinearLayout>
 
     <ImageView
       android:id="@+id/rightButton"
       android:layout_width="wrap_content"
       android:layout_height="match_parent"
-      android:layout_weight="1"
-      android:src="@drawable/right_arrow"
-      android:contentDescription="@string/right_arrow_button" />
+      android:layout_weight="0.1"
+      android:contentDescription="@string/right_arrow_button"
+      android:layout_marginRight="10dp"
+      android:minWidth="15dp"
+      android:scaleX="1.3"
+      android:scaleY="1.3"
+      android:src="@drawable/angle_right"
+      android:layout_marginEnd="10dp" />
 
   </LinearLayout>
 </merge>

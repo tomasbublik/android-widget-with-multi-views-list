@@ -95,10 +95,21 @@ public class AppWidgetConfigure extends Activity {
         }
     }
 
+    /**
+     * @param context     Application context associated with the widget
+     * @param appWidgetId Widget id
+     */
     static void deleteTitlePref(Context context, int appWidgetId) {
+        throw new UnsupportedOperationException();
     }
 
+    /**
+     * @param context      Application context associated with the widget
+     * @param appWidgetIds All the widget ids
+     * @param texts        List of String to load texts into
+     */
     static void loadAllTitlePrefs(Context context, ArrayList<Integer> appWidgetIds,
                                   ArrayList<String> texts) {
+        throw new UnsupportedOperationException();
     }
 }

@@ -1,15 +1,21 @@
 package cz.bublik.testwidgetapp;
 
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
+import cz.bublik.testwidgetapp.widget.AppWidget;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +35,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button sendBroadcastButton = findViewById(R.id.broadcastButton);
+        sendBroadcastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AppWidget.class);
+                intent.setAction(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+                int[] ids = AppWidgetManager.getInstance(getApplicationContext()).getAppWidgetIds(new ComponentName(getApplicationContext(), AppWidget.class));
+                intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids);
+                getApplicationContext().sendBroadcast(intent);
+            }
+        });
     }
 
     @Override

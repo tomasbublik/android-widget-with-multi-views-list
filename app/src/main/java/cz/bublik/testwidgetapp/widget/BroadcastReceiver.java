@@ -8,18 +8,18 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class BroadcastReceiver extends android.content.BroadcastReceiver {
+
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.d("ExampleBroadcastRec", "intent=" + intent);
+        Log.d("BroadcastReceiver", "intent=" + intent);
         // For our example, we'll also update all of the widgets when the timezone
         // changes, or the user or network sets the time.
         String action = intent.getAction();
 
-        if (action.equals(Intent.ACTION_TIMEZONE_CHANGED)
-                || action.equals(Intent.ACTION_TIME_CHANGED)) {
+        if (action.equals(Intent.ACTION_TIME_CHANGED)) {
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
-            ArrayList<Integer> appWidgetIds = new ArrayList<Integer>();
-            ArrayList<String> texts = new ArrayList<String>();
+            ArrayList<Integer> appWidgetIds = new ArrayList<>();
+            ArrayList<String> texts = new ArrayList<>();
             AppWidgetConfigure.loadAllTitlePrefs(context, appWidgetIds, texts);
             final int N = appWidgetIds.size();
             for (int i = 0; i < N; i++) {
